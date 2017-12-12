@@ -1,0 +1,162 @@
+html {
+  height: 100%;
+  padding-top: 0px;
+  font: 14px  Courier;
+
+}
+
+body {
+  /*background-color: #FFFFFF;*/
+  color: rgb(239, 239, 239);
+  /*position: relative;*/
+}
+
+.navbar {
+    /*background-color: transparent;*/
+    /*background-color: #5B6674;*/
+    background-color: rgba(91, 102, 116, 0.6);
+    /*mix-blend-mode:  soft-light;*/
+    background-blend-mode: soft-light;
+
+}
+
+.navbar-light .navbar-brand , .navbar-light .navbar-nav .nav-link{
+  color: white;
+  font-weight: bolder;
+}
+
+
+.jumbotron {
+  margin-bottom: 0;
+  padding: 0;
+  background-color: black;
+}
+
+img {
+  display: inline-block;
+  max-width: 100%;
+  vertical-align: middle;
+  height: auto;
+}
+
+h1 {
+  font-size: 40pt;
+  font-weight: bolder;
+  text-shadow: 2px 2px 4px #000000;
+}
+h2 {
+  font-size: 20pt;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px #000000;
+}
+h3 {
+
+  font-size: 18pt;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px #000000;
+
+}
+h4 {
+  font-size: 16pt;
+  font-weight: bold;
+  text-shadow: 2px 2px 3px #000000;
+}
+
+.skills_list ul {
+  list-style: none;
+  padding: 0;
+}
+
+.skills_list ul li {
+  font-size: 14pt;
+}
+
+.card {
+  background-color: white;
+  border-radius: 2rem;
+}
+.card:hover{
+  background-color: yellow;
+}
+#contact {
+  background: url("/img/Contact_background.jpg") no-repeat center center;
+  background-size: auto;
+  /*display: flex;*/
+}
+#title_page {
+  /*background : url("/img/info_background.png") no-repeat center center;*/
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+#info {
+
+box-shadow: 0 2px 12px 0 rgba(255,255,255,0.50);
+background: url("/img/texture.png") repeat  ;
+background-size:  auto;
+min-height: 50vh;
+height: 100%;
+width: 100%;
+display: flex;
+align-items: center;
+}
+
+#skills {
+  background-color: #495463;
+  min-height: 80vh;
+}
+
+#contact {
+  background-color: #4954;
+  min-height: 80vh;
+}
+#github{
+  mix-blend-mode: exclusion;
+}
+
+#cv{
+  mix-blend-mode: exclusion;
+}
+
+#linkedIn{
+  mix-blend-mode: exclusion;
+
+}
+
+#backend{
+  background-color: #A1A450;
+  box-shadow: 0 0 15px 0 rgba(0,0,0,0.50);
+  /* Type something Type: */
+  /*font-family: Courier;
+  font-size: 20px;*/
+  height: 500px;
+  color: #FFFFFF;
+  z-index: 1;
+
+}
+
+#design {
+  background-color: #8E9780;
+  z-index: 0;
+}
+
+#frontend {
+  background-color: #8E9780;
+  z-index: 0;
+}
+@media only screen @media (min-width: 768px) {
+
+}
+
+@media (min-width: 900px) {
+
+}
+
+@media (min-width: 1200px) {
+
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <% include ../partials/head %>
+</head>
+
+<body data-spy="scroll" data-target="#navbar-spy" data-offset="-5" >
+  <header>
+    <% include ../partials/menu %>
+  </header>
+
+   <div id="title_page" class="parallax-window" data-parallax="scroll" data-image-src="img/title_background_sharper.jpg" data-bleed="0" data-position="top">
+      <div class="container-fluid text-center">
+        <h1>Software Developer</h1>
+         <br>
+         <h2>Jonathan Markland</h2>
+      </div>
+  </div>
+
+  <div class=" text-center" id="info">
+    <div class="container-fluid" style="height:inherit">
+
+      <% include ../info/index %>
+
+    </div>
+  </div>
+
+  <div class="jumbotron text-center" id="skills">
+    <div class="container-fluid">
+      <% include ../skills/index %>
+    </div>
+  </div>
+
+  <div class="jumbotron text-center" id="contact">
+      <div class="col-xs-offset-1 col-xs-9" >
+          <% include ../contact/index %>
+      </div>
+  </div>
+
+  <% include ../partials/scripts %>
+
+</body>
+
+
+</html>
