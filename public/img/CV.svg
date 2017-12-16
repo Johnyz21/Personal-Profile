@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="284px" height="241px" viewBox="0 0 284 241" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>CV</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <rect id="path-1" x="0" y="0" width="270" height="223" rx="54"></rect>
+        <filter x="-5.9%" y="-4.0%" width="111.9%" height="116.1%" filterUnits="objectBoundingBox" id="filter-2">
+            <feOffset dx="0" dy="11" in="SourceAlpha" result="shadowOffsetOuter1"></feOffset>
+            <feGaussianBlur stdDeviation="3.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"></feGaussianBlur>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowBlurOuter1"></feColorMatrix>
+        </filter>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="5th-Iteration" transform="translate(-426.000000, -666.000000)">
+            <g id="About" transform="translate(0.000000, 475.000000)">
+                <g id="CV" transform="translate(433.000000, 191.000000)">
+                    <g id="Rectangle">
+                        <use fill="black" fill-opacity="1" filter="url(#filter-2)" xlink:href="#path-1"></use>
+                        <use fill="#E0D2E4" fill-rule="evenodd" xlink:href="#path-1"></use>
+                    </g>
+                    <g transform="translate(76.000000, 19.000000)" id="svg2" fill="#000000">
+                        <g>
+                            <g id="layer1" transform="translate(0.000000, 0.824460)">
+                                <g id="g4608-9" transform="translate(0.000000, 0.211951)">
+                                    <g id="g10290" transform="translate(0.055130, 0.489124)">
+                                        <g id="g10513" transform="translate(0.010920, -0.000005)">
+                                            <path d="M0.33395,0.87447 L0.33395,6.22447 L0.33395,172.07447 L123.822821,172.07447 L123.822821,41.7309156 L82.7991838,0.87447 L0.33395,0.87447 Z M11.0130518,11.5535716 L78.3896143,11.5535716 L113.143718,46.1822825 L113.143718,161.416264 L11.0130518,161.416264 L11.0130518,11.5535716 Z" id="path4149-9"></path>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
+                    </g>
+                    <text font-family="Courier-Bold, Courier" font-size="48" font-weight="bold" fill="#000000">
+                        <tspan x="106.695312" y="126">CV</tspan>
+                    </text>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>
