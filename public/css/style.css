@@ -1,7 +1,7 @@
 html {
   height: 100%;
   padding-top: 0px;
-  font: 14px  Courier;
+  font: 12px  Courier;
   /* background : url("/img/home_background_brighte.png") repeat  ; */
   background-color: #2F2332;
 
@@ -21,6 +21,10 @@ body {
     /*mix-blend-mode:  soft-light;*/
     background-blend-mode: lighten;
 
+}
+.parallax-window {
+    min-height: 400px;
+    background: transparent;
 }
 .navbar-light .navbar-brand  a {
   padding: 0;
@@ -124,6 +128,7 @@ canvas {
   color: white;
 }
 
+
 .btn-skill {
   background-color: rgba(1, 1, 1, 0);
   color: white;
@@ -131,13 +136,22 @@ canvas {
   padding: 0px 10px;
   font-weight: lighter;
 }
-
-.btn-skill:focus  {
+.btn-skill:focus , .btn-skill.focus{
+  border-bottom: solid #B185BC;
+  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 0 0px rgba(0,0,0,0.5);
+  font-weight: bolder;
+}
+.btn-skill:not([disabled]):not(.disabled):active, .btn-skill:not([disabled]):not(.disabled).active{
+  border-bottom: solid #B185BC;
+  /* box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 0 0px rgba(0,0,0,0.5); */
+  font-weight: bolder;
+}
+/* .btn-skill:focus, .btn-skill:active  {
   border-bottom: solid #B185BC;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 0 0px rgba(0,0,0,0.5);
   font-weight: bolder;
   font-size: 15pt;
-}
+} */
 
 
 
@@ -233,7 +247,16 @@ padding:40px;
   display: flex;
   align-items: center;
 }
-
+#intro {
+  background-color: #2F2332;
+  min-height: 60vh;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  margin: 0;
+  font-size: 12pt;
+  text-align: center;
+}
 #info {
   background-color: #352739;
   min-height: 60vh;
@@ -241,8 +264,8 @@ padding:40px;
   width: 100%;
   align-items: center;
   margin: 0;
-
 }
+
 
 #skills {
   background-color: #2F2332;

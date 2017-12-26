@@ -14,7 +14,174 @@
 <script type="text/javascript" src="js/particles.js"></script>
 
 <script >
+
+// particles js
 particlesJS.load('particles-js', 'js/particles.json', function() {
   console.log('callback - particles-js config loaded');
 });
+
+$(document).ready(function(){
+
+  var options = {
+    queue: true,
+    duration: 900,
+    swing: 'easeOutSine'
+  }
+
+  function showLanguages(){
+    $("#Java").show(options);
+    $("#Javascript").show(options);
+    $("#CSS").show(options);
+    $("#HTML").show(options);
+  }
+  function hideLanguages(){
+    $("#Java").hide(options);
+    $("#Javascript").hide(options);
+    $("#CSS").hide(options);
+    $("#HTML").hide(options);
+  }
+
+  function showDatabseSkills(){
+    $("#SQL").show(options);
+    $("#MongoDB").show(options);
+    $("#Hibernate").show(options);
+  }
+  function hideDatabseSkills(){
+    $("#SQL").hide(options);
+    $("#MongoDB").hide(options);
+    $("#Hibernate").hide(options);
+  }
+
+  function showTechnologies(){
+    $("#Nodejs").show(options);
+    $("#Expressjs").show(options);
+    $("#Spring").show(options);
+    $("#Wicket").show(options);
+  }
+  function hideTechnologies(){
+    $("#Nodejs").hide(options);
+    $("#Expressjs").hide(options);
+    $("#Spring").hide(options);
+    $("#Wicket").hide(options);
+  }
+
+  function showVersioning(){
+    $("#Git").show(options);
+    $("#SVN").show(options);
+  }
+  function hideVersioning(){
+    $("#Git").hide(options);
+    $("#SVN").hide(options);
+  }
+  function showCollaborationTools(){
+    $("#Slack").show(options);
+    $("#Jira").show(options);
+    $("#Confluence").show(options);
+  }
+  function hideCollaborationTools(){
+    $("#Slack").hide(options);
+    $("#Jira").hide(options);
+    $("#Confluence").hide(options);
+  }
+  function showIDEs(){
+    $("#Eclipse").show(options);
+  }
+  function hideIDEs(){
+
+    $("#Eclipse").hide(options);
+  }
+  function showTextEditors(){
+    $("#Netbeans").show(options);
+    $("#Atom").show(options);
+  }
+  function hideTextEditors(){
+    $("#Netbeans").hide(options);
+    $("#Atom").hide(options);
+  }
+
+  $("#All").click(function(){
+    // hideLanguages();
+    // hideDatabseSkills();
+    // hideTechnologies();
+    // hideVersioning();
+    // hideCollaborationTools();
+    // hideIDEs();
+    // hideTextEditors();
+
+    showLanguages();
+    showDatabseSkills();
+    showTechnologies();
+    showVersioning();
+    showCollaborationTools();
+    showIDEs();
+    showTextEditors();
+   });
+
+  $("#Languages").click(function(){
+      showLanguages();
+      hideDatabseSkills();
+      hideTechnologies();
+      hideVersioning();
+      hideCollaborationTools();
+      hideIDEs();
+      hideTextEditors();
+   });
+
+   $("#Database_Skills").click(function(){
+     hideLanguages();
+     showDatabseSkills();
+     hideTechnologies();
+     hideVersioning();
+     hideCollaborationTools();
+     hideIDEs();
+     hideTextEditors();
+   });
+
+   $("#Technologies").click(function(){
+     hideLanguages();
+     hideDatabseSkills();
+     showTechnologies();
+     hideVersioning();
+     hideCollaborationTools();
+     hideIDEs();
+     hideTextEditors();
+   });
+   $("#Versioning").click(function(){
+     hideLanguages();
+     hideDatabseSkills();
+     hideTechnologies();
+     showVersioning();
+     hideCollaborationTools();
+     hideIDEs();
+     hideTextEditors();
+   });
+   $("#Collaboration_Tools").click(function(){
+     hideLanguages();
+     hideDatabseSkills();
+     hideTechnologies();
+     hideVersioning();
+     showCollaborationTools();
+     hideIDEs();
+     hideTextEditors();
+   });
+   $("#IDEs").click(function(){
+     hideLanguages();
+     hideDatabseSkills();
+     hideTechnologies();
+     hideVersioning();
+     hideCollaborationTools();
+     showIDEs();
+     hideTextEditors();
+   });
+   $("#Text_Editors").click(function(){
+     hideLanguages();
+     hideDatabseSkills();
+     hideTechnologies();
+     hideVersioning();
+     hideCollaborationTools();
+     hideIDEs();
+     showTextEditors();
+   });
+});
+
 </script>
