@@ -1,24 +1,26 @@
+@fontface{
+  font-family: Impact;
+  src: url("css/font/impact.ttf");
+}
 html {
   height: 100%;
   padding-top: 0px;
   font: 12px  Courier;
   /* background : url("/img/home_background_brighte.png") repeat  ; */
-  background-color: #2F2332;
-
-  /* background-color: #6B2268; */
+  background-color: #FAE3C6;
 }
 
 body {
   /*background-color: #FFFFFF;*/
-  color: rgb(239, 239, 239);
+  color: #2F2332;
   /*position: relative;*/
 }
 
 .navbar {
     /*background-color: transparent;*/
     /*background-color: #5B6674;*/
-    background-color: rgba(51, 39, 54, 0.6);
-    /*mix-blend-mode:  soft-light;*/
+    background-color: rgba(250, 227, 198, 0.6);
+    /* mix-blend-mode:  soft-light; */
     background-blend-mode: lighten;
 
 }
@@ -71,21 +73,33 @@ img {
   height: auto;
 }
 
-h1 {
+/* h1 {
   font-size: 40pt;
   font-weight: bolder;
   text-shadow: 2px 2px 4px #000000;
+} */
+h1 {
+  /* font-size: 110pt; */
+  font-size: 12rem;
+  /* font-weight: bolder; */
+  /* text-shadow: 2px 2px 4px #000000; */
+  font-family: Impact;
+  color: #2F2332;
+  text-align: center;
 }
 h2 {
-  font-size: 20pt;
+  font-size: 36pt;
   font-weight: bold;
-  text-shadow: 2px 2px 4px #000000;
+  /* text-shadow: 2px 2px 4px #000000; */
+  text-align: center;
+  color: #2F2332;
 }
 h3 {
 
-  font-size: 18pt;
+  font-size: 20pt;
   font-weight: bold;
-  text-shadow: 2px 2px 3px #000000;
+  text-align: center;
+  color: #2F2332;
 
 }
 h4 {
@@ -136,9 +150,10 @@ canvas {
   padding: 0px 10px;
   font-weight: lighter;
 }
-.btn-skill:focus , .btn-skill.focus{
+
+.btn-skill:focus , .btn-skill.focus , .btn-skill:hover{
   border-bottom: solid #B185BC;
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.5), 0 0 0px rgba(0,0,0,0.5);
+  box-shadow: inset 0 0px 0px rgba(0, 0, 0, 0.5), 0 0 0px rgba(0,0,0,1);
   font-weight: bolder;
 }
 .btn-skill:not([disabled]):not(.disabled):active, .btn-skill:not([disabled]):not(.disabled).active{
@@ -194,9 +209,11 @@ canvas {
   display: block;
   vertical-align: bottom;
 }
-
-.particle-container{
-  /*background:#00f;*/
+p {
+  color: #2F2332;
+  font-size: 16pt;
+}
+/* .particle-container{
 text-align:center;
 padding:40px;
 }
@@ -212,29 +229,26 @@ padding:40px;
   z-index:9999;
   color:#fff;
   font-size:20pt;
-}
+} */
 #test_title{
   height:100vh;
-  width: 100%;
-  padding: 0;
-  display: flex;
+  min-height: 100vh;
+  /* width: 100%; */
+  /* padding: 0; */
+  /* display: flex; */
   align-items: center;
-  justify-content: center;
+  /* justify-content: center; */
+  background :url("/img/home_background_tile.png") repeat;
 }
-#particles-js {
+/* #particles-js {
   position: absolute;
   width: 100%;
   height: 100%;
   min-height: 100vh;
   background: url("/img/test_home_background.jpg") no-repeat ;
-  /*background-color: #56465A;*/
-  /*background-image: url("");*/
-  /*background-repeat: no-repeat;*/
   background-size: cover;
   background-position: center;
-  /*background-position: 50% 50%;*/
-
-}
+} */
 
 
 #title_page {
@@ -248,7 +262,7 @@ padding:40px;
   align-items: center;
 }
 #intro {
-  background-color: #2F2332;
+  background-color: #FAEAD5;
   min-height: 60vh;
   height: 100%;
   width: 100%;
@@ -258,7 +272,7 @@ padding:40px;
   text-align: center;
 }
 #info {
-  background-color: #352739;
+  background-color: #E6D5C1;
   min-height: 60vh;
   height: 100%;
   width: 100%;
@@ -268,7 +282,7 @@ padding:40px;
 
 
 #skills {
-  background-color: #2F2332;
+  background-color: #FAEAD5;
   shape-outside: polygon(0 0, 100% 0, 100% 0, 100% 0, 30% 100%);
   shape-margin: 20px;
 
@@ -277,29 +291,17 @@ padding:40px;
 }
 
 #contact {
-    background : url("/img/home_background_brighter.png") repeat  ;
+    /* background : url("/img/home_background_brighter.png") repeat  ; */
+    background-color: #E6D5C1;
   /*background-color: #4954;
   min-height: 80vh;*/
 }
-#github{
-  /*mix-blend-mode: exclusion;*/
+
+#All , #Languages, #Database_Skills , #Technologies, #Versioning , #Collaboration_Tools , #IDEs , #Text_Editors {
+  color: #192A3E;
 }
-
-#cv{
-  /*mix-blend-mode: exclusion;*/
-}
-
-#linkedIn{
-  /*mix-blend-mode: exclusion;*/
-
-}
-
-#backend{
-  /*background-color: #A1A450;
-  box-shadow: 0 0 15px 0 rgba(0,0,0,0.50);
-  height: 500px;
-  color: #FFFFFF;
-  z-index: 1;*/
+ #github, #cv , #linkedIn , #Java ,#Javascript, #Nodejs , #Slack , #Eclipse , #Spring , #Expressjs , #Hibernate , #Jira , #Atom , #HTML , #Wicket , #CSS , #Confluence , #Git , #SQL, #SVN , #Netbeans , #MongoDB {
+  mix-blend-mode: difference;
 
 }
 
@@ -308,10 +310,7 @@ padding:40px;
   z-index: 0;*/
 }
 
-#frontend {
-  /*background-color: #8E9780;
-  z-index: 0;*/
-}
+
 @media only screen @media (min-width: 768px) {
 
 }
