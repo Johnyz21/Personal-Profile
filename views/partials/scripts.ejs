@@ -13,12 +13,40 @@
 <!-- Particlesjs -->
 <script type="text/javascript" src="js/particles.js"></script>
 
+<!-- Vuejs -->
+<script type="text/javascript" src="js/vue.min.js"></script>
+
+<!-- Vee-validate -->
+<script type="text/javascript" src="js/vee-validate.min.js"></script>
+
+<script >
+Vue.use(VeeValidate);
+
+new Vue({
+	el: '#submission_form',
+  data: {
+		something: '',
+    email:''
+  }
+});
+
+
+
+
+</script>
+
+
+</script>
+
+
 <script >
 
 // particles js
 // particlesJS.load('particles-js', 'js/particles.json', function() {
 //   console.log('callback - particles-js config loaded');
 // });
+
+
 
 $(document).ready(function(){
 
