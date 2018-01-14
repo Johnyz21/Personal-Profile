@@ -5,18 +5,14 @@
   <br>
   <div class="row justify-content-center">
     <div id="submission_form">
-      <form action="/" method="post">
+      <form @submit.prevent="validateBeforeSubmit" action="/" method="post" id="myForm">
         <div class="form-group">
-          <label for="name" class="text-center">Name</label>
-          <input type="text" class="form-control" name="name"aria-describedby="name" placeholder="">
+          <label for="name"  class="text-center">Name</label>
+          <input type="text" v-validate="'required|alpha_spaces'" class="form-control" name="name"aria-describedby="name" placeholder="">
+          <span class="error">{{errors.first('name')}}</span>
         </div>
         <div class="form-group" >
           <label for="email" class="text-center">Email</label>
-          <% if(success) { %>
-
-          <% } else if (errors){ %>
-            <p>Email is NOT VALID!!</p>
-          <% } %>
           <input type="text" v-validate="'required|email'" class= "form-control" name="email" aria-describedby="email" placeholder="">
           <span class="error">{{errors.first('email')}}</span>
         </div>
@@ -26,14 +22,17 @@
         </div>
         <div class="form-group">
           <label for="message" class="text-center">Message</label>
-          <textarea class="form-control"  rows="5" name="message"></textarea>
+          <textarea class="form-control"  rows="6" name="message"></textarea>
+
         </div>
          <br>
-        <button type="submit" class="btn btn-contact" value="submit">Send Message</button>
+        <button  type="submit" class="btn btn-contact" >Send Message</button>
          <br>
          <br>
         <% if(success) { %>
-          <p>Thanks for getting in contact</p>
+
+        <% } else if (errors){ %>
+          <p>An error occurred, if this persists please get in touch via Linked in</p>
         <% } %>
       </form>
 

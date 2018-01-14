@@ -19,139 +19,176 @@
 <!-- Vee-validate -->
 <script type="text/javascript" src="js/vee-validate.min.js"></script>
 
-<script >
-Vue.use(VeeValidate);
+<!-- Sweet Alert -->
+<script type="text/javascript" src="js/sweetalert.min.js"></script>
 
-new Vue({
-	el: '#submission_form',
-  data: {
-		something: '',
-    email:''
-  }
-});
+<script>
+  Vue.use(VeeValidate);
+
+  new Vue({
+    el: '#submission_form',
+    data: {
+      name:'',
+      email: ''
+    },
+    methods: {
+      validateBeforeSubmit(e) {
+        e.preventDefault();
+        this.$validator.validateAll().then((result) => {
+          if (result) {
+
+            swal({
+                title: 'Thanks for getting in touch!',
+                text: 'Enjoy your day',
+                icon: "success",
+                timer: 2500,
+                button: {
+                  text: "close",
+                  closeModal: true,
+                  visible: true,
+                }
+              }).then(function(){
+                document.querySelector('#myForm').submit();
+              });
+          } else {
+            swal('Something strange happened', 'Please double check the form!', 'error');
+            return false;
+          }
 
 
+        })
+      }
+    }
 
-
+  });
 </script>
 
 
 </script>
 
 
-<script >
-
-// particles js
-// particlesJS.load('particles-js', 'js/particles.json', function() {
-//   console.log('callback - particles-js config loaded');
-// });
-
-
-
-$(document).ready(function(){
-
-  // $(window).resize(function(){
-  //   if($(this).width >= 1200){
-  //
-  //   }
+<script>
+  // particles js
+  // particlesJS.load('particles-js', 'js/particles.json', function() {
+  //   console.log('callback - particles-js config loaded');
   // });
-  //skills
-  var options = {
-    queue: true,
-    duration: 900,
-    swing: 'easeOutSine'
-  }
 
-  function showLanguages(){
-    $("#Java").show(options);
-    $("#Javascript").show(options);
-    $("#CSS").show(options);
-    $("#HTML").show(options);
-  }
-  function hideLanguages(){
-    $("#Java").hide(options);
-    $("#Javascript").hide(options);
-    $("#CSS").hide(options);
-    $("#HTML").hide(options);
-  }
 
-  function showDatabseSkills(){
-    $("#SQL").show(options);
-    $("#MongoDB").show(options);
-    $("#Hibernate").show(options);
-  }
-  function hideDatabseSkills(){
-    $("#SQL").hide(options);
-    $("#MongoDB").hide(options);
-    $("#Hibernate").hide(options);
-  }
 
-  function showTechnologies(){
-    $("#Nodejs").show(options);
-    $("#Expressjs").show(options);
-    $("#Spring").show(options);
-    $("#Wicket").show(options);
-  }
-  function hideTechnologies(){
-    $("#Nodejs").hide(options);
-    $("#Expressjs").hide(options);
-    $("#Spring").hide(options);
-    $("#Wicket").hide(options);
-  }
+  $(document).ready(function() {
 
-  function showVersioning(){
-    $("#Git").show(options);
-    $("#SVN").show(options);
-  }
-  function hideVersioning(){
-    $("#Git").hide(options);
-    $("#SVN").hide(options);
-  }
-  function showCollaborationTools(){
-    $("#Slack").show(options);
-    $("#Jira").show(options);
-    $("#Confluence").show(options);
-  }
-  function hideCollaborationTools(){
-    $("#Slack").hide(options);
-    $("#Jira").hide(options);
-    $("#Confluence").hide(options);
-  }
-  function showIDEs(){
-    $("#Eclipse").show(options);
-  }
-  function hideIDEs(){
+    // $(window).resize(function(){
+    //   if($(this).width >= 1200){
+    //
+    //   }
+    // });
+    //skills
+    var options = {
+      queue: true,
+      duration: 900,
+      swing: 'easeOutSine'
+    }
 
-    $("#Eclipse").hide(options);
-  }
-  function showTextEditors(){
-    $("#Netbeans").show(options);
-    $("#Atom").show(options);
-  }
-  function hideTextEditors(){
-    $("#Netbeans").hide(options);
-    $("#Atom").hide(options);
-  }
+    function showLanguages() {
+      $("#Java").show(options);
+      $("#Javascript").show(options);
+      $("#CSS").show(options);
+      $("#HTML").show(options);
+    }
 
-  $("#All").click(function(){
-    // hideLanguages();
-    // hideDatabseSkills();
-    // hideTechnologies();
-    // hideVersioning();
-    // hideCollaborationTools();
-    // hideIDEs();
-    // hideTextEditors();
+    function hideLanguages() {
+      $("#Java").hide(options);
+      $("#Javascript").hide(options);
+      $("#CSS").hide(options);
+      $("#HTML").hide(options);
+    }
 
-    showLanguages();
-    showDatabseSkills();
-    showTechnologies();
-    showVersioning();
-    showCollaborationTools();
-    showIDEs();
-    showTextEditors();
-   });
+    function showDatabseSkills() {
+      $("#SQL").show(options);
+      $("#MongoDB").show(options);
+      $("#Hibernate").show(options);
+    }
 
-  $("#Languages").click(function(){
+    function hideDatabseSkills() {
+      $("#SQL").hide(options);
+      $("#MongoDB").hide(options);
+      $("#Hibernate").hide(options);
+    }
+
+    function showTechnologies() {
+      $("#Nodejs").show(options);
+      $("#Expressjs").show(options);
+      $("#Spring").show(options);
+      $("#Wicket").show(options);
+    }
+
+    function hideTechnologies() {
+      $("#Nodejs").hide(options);
+      $("#Expressjs").hide(options);
+      $("#Spring").hide(options);
+      $("#Wicket").hide(options);
+    }
+
+    function showVersioning() {
+      $("#Git").show(options);
+      $("#SVN").show(options);
+    }
+
+    function hideVersioning() {
+      $("#Git").hide(options);
+      $("#SVN").hide(options);
+    }
+
+    function showCollaborationTools() {
+      $("#Slack").show(options);
+      $("#Jira").show(options);
+      $("#Confluence").show(options);
+    }
+
+    function hideCollaborationTools() {
+      $("#Slack").hide(options);
+      $("#Jira").hide(options);
+      $("#Confluence").hide(options);
+    }
+
+    function showIDEs() {
+      $("#Eclipse").show(options);
+    }
+
+    function hideIDEs() {
+
+      $("#Eclipse").hide(options);
+    }
+
+    function showTextEditors() {
+      $("#Netbeans").show(options);
+      $("#Atom").show(options);
+    }
+
+    function hideTextEditors() {
+      $("#Netbeans").hide(options);
+      $("#Atom").hide(options);
+    }
+
+    $("#All").click(function() {
+      // hideLanguages();
+      // hideDatabseSkills();
+      // hideTechnologies();
+      // hideVersioning();
+      // hideCollaborationTools();
+      // hideIDEs();
+      // hideTextEditors();
+
+      showLanguages();
+      showDatabseSkills();
+      showTechnologies();
+      showVersioning();
+      showCollaborationTools();
+      showIDEs();
+      showTextEditors();
+    });
+
+    $("#Languages").click(function() {
       showLanguages();
       hideDatabseSkills();
       hideTechnologies();
@@ -159,63 +196,62 @@ $(document).ready(function(){
       hideCollaborationTools();
       hideIDEs();
       hideTextEditors();
-   });
+    });
 
-   $("#Database_Skills").click(function(){
-     hideLanguages();
-     showDatabseSkills();
-     hideTechnologies();
-     hideVersioning();
-     hideCollaborationTools();
-     hideIDEs();
-     hideTextEditors();
-   });
+    $("#Database_Skills").click(function() {
+      hideLanguages();
+      showDatabseSkills();
+      hideTechnologies();
+      hideVersioning();
+      hideCollaborationTools();
+      hideIDEs();
+      hideTextEditors();
+    });
 
-   $("#Technologies").click(function(){
-     hideLanguages();
-     hideDatabseSkills();
-     showTechnologies();
-     hideVersioning();
-     hideCollaborationTools();
-     hideIDEs();
-     hideTextEditors();
-   });
-   $("#Versioning").click(function(){
-     hideLanguages();
-     hideDatabseSkills();
-     hideTechnologies();
-     showVersioning();
-     hideCollaborationTools();
-     hideIDEs();
-     hideTextEditors();
-   });
-   $("#Collaboration_Tools").click(function(){
-     hideLanguages();
-     hideDatabseSkills();
-     hideTechnologies();
-     hideVersioning();
-     showCollaborationTools();
-     hideIDEs();
-     hideTextEditors();
-   });
-   $("#IDEs").click(function(){
-     hideLanguages();
-     hideDatabseSkills();
-     hideTechnologies();
-     hideVersioning();
-     hideCollaborationTools();
-     showIDEs();
-     hideTextEditors();
-   });
-   $("#Text_Editors").click(function(){
-     hideLanguages();
-     hideDatabseSkills();
-     hideTechnologies();
-     hideVersioning();
-     hideCollaborationTools();
-     hideIDEs();
-     showTextEditors();
-   });
-});
-
+    $("#Technologies").click(function() {
+      hideLanguages();
+      hideDatabseSkills();
+      showTechnologies();
+      hideVersioning();
+      hideCollaborationTools();
+      hideIDEs();
+      hideTextEditors();
+    });
+    $("#Versioning").click(function() {
+      hideLanguages();
+      hideDatabseSkills();
+      hideTechnologies();
+      showVersioning();
+      hideCollaborationTools();
+      hideIDEs();
+      hideTextEditors();
+    });
+    $("#Collaboration_Tools").click(function() {
+      hideLanguages();
+      hideDatabseSkills();
+      hideTechnologies();
+      hideVersioning();
+      showCollaborationTools();
+      hideIDEs();
+      hideTextEditors();
+    });
+    $("#IDEs").click(function() {
+      hideLanguages();
+      hideDatabseSkills();
+      hideTechnologies();
+      hideVersioning();
+      hideCollaborationTools();
+      showIDEs();
+      hideTextEditors();
+    });
+    $("#Text_Editors").click(function() {
+      hideLanguages();
+      hideDatabseSkills();
+      hideTechnologies();
+      hideVersioning();
+      hideCollaborationTools();
+      hideIDEs();
+      showTextEditors();
+    });
+  });
 </script>
