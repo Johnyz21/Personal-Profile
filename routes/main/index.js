@@ -8,7 +8,7 @@ var router = express.Router();
 /* GET home page. */
 router.get('/', function(req, res, next) {
   res.render('main/index', {
-    title: 'Jonathan Markland!',
+    title: 'Jonathan Markland',
     success: req.session.success,
     errors: req.session.errors
   });

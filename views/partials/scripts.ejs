@@ -29,7 +29,8 @@
     el: '#submission_form',
     data: {
       name:'',
-      email: ''
+      email: '',
+      message: ''
     },
     methods: {
       validateBeforeSubmit(e) {
@@ -153,20 +154,19 @@
 
     function showIDEs() {
       $("#Eclipse").show(options);
+      $('#Netbeans').show(options);
     }
 
     function hideIDEs() {
-
+      $('#Netbeans').hide(options);
       $("#Eclipse").hide(options);
     }
 
     function showTextEditors() {
-      $("#Netbeans").show(options);
       $("#Atom").show(options);
     }
 
     function hideTextEditors() {
-      $("#Netbeans").hide(options);
       $("#Atom").hide(options);
     }
 
@@ -253,5 +253,13 @@
       hideIDEs();
       showTextEditors();
     });
+    $("#cv_notification").click(function() {
+      swal({
+        title: 'Available on request',
+        text: 'Please request one through the form at the end of the page'
+      });
+
+    });
+
   });
 </script>
