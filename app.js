@@ -34,12 +34,13 @@ app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/particles.js'));
 app.use('/js', express.static(__dirname + '/node_modules/vue/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/vee-validate/dist'));
-app.use('/js', express.static(__dirname + '/node_modules/sweetalert/dist'))
+app.use('/js', express.static(__dirname + '/node_modules/sweetalert/dist'));
+app.use('/static', express.static(__dirname + '/public/img'));
 // app.use('/js', express.static(__dirname + '/node_modules/jquery-parallax.js'));
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
-  var err = new Error('Not Found');
+  var err = new Error('I think your lost!');
   err.status = 404;
   next(err);
 });
@@ -52,7 +53,7 @@ app.use(function(err, req, res, next) {
 
   // render the error page
   res.status(err.status || 500);
-  res.render('error');
+  res.render('error',{ title : ''});
 });
 
 module.exports = app;
