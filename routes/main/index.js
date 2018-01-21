@@ -36,8 +36,8 @@ router.post('/', function(req, res, next) {
   });
 
   var mailOptions = {
-    from: 'jjm21@hotmail.co.uk',
-    to: 'jjm21@hotmail.co.uk',
+    from: myEmail,
+    to: myEmail,
     subject: 'Website Email ' + subject  ,
     text: 'Name:' + name + '\nEmail ' + email + '\nMessage:' +message
   };
