@@ -7,6 +7,8 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var expressSession = require('express-session');
 var index = require('./routes/main/index.js');
+var compression = require('compression');
+var helmet = require('helmet');
 
 
 var app = express();
@@ -24,14 +26,15 @@ app.use(expressValidator());
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(expressSession({ secret: 'theseAreAFewOfMyFavouriteThings', saveUninitialized: false, resave: false}));
-// app.use(favicon(path.join(__dirname, 'public', '/img/logo.svg')));
+app.use(compression());
+app.use(helmet());
 
 app.use('/', index);
 app.use('/js',  express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/js',  express.static(__dirname + '/node_modules/jquery/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
-app.use('/js', express.static(__dirname + '/node_modules/particles.js'));
+// app.use('/js', express.static(__dirname + '/node_modules/particles.js'));
 app.use('/js', express.static(__dirname + '/node_modules/vue/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/vee-validate/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/sweetalert/dist'));
