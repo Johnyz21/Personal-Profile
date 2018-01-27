@@ -21,6 +21,7 @@ router.post('/', function(req, res, next) {
 
   var myEmail = properties.get('email.address');
   var myEmailPassword = properties.get('email.password');
+  var reciever = properties.get('email.reciever');
 
   var name = req.body.name;
   var email = req.body.email;
@@ -37,8 +38,8 @@ router.post('/', function(req, res, next) {
 
   var mailOptions = {
     from: myEmail,
-    to: myEmail,
-    subject: 'Website Email ' + subject  ,
+    to: reciever,
+    subject: 'Personal Profile:' + subject  ,
     text: 'Name:' + name + '\nEmail ' + email + '\nMessage:' +message
   };
 
