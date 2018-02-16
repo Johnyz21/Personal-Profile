@@ -33,14 +33,16 @@ app.use('/', index);
 app.use('/js',  express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/js',  express.static(__dirname + '/node_modules/jquery/dist'));
-app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
-// app.use('/js', express.static(__dirname + '/node_modules/particles.js'));
+// app.use('/js', express.static(__dirname + '/node_modules/popper.js/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/vue/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/vee-validate/dist'));
 app.use('/js', express.static(__dirname + '/node_modules/sweetalert/dist'));
 app.use('/static', express.static(__dirname + '/public/img'));
-// app.use('/js', express.static(__dirname + '/node_modules/jquery-parallax.js'));
 
+app.get('/robots.txt', function (req, res) {
+    res.type('text/plain');
+    res.send("User-agent: *\nDisallow: /");
+});
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('I think your lost!');
