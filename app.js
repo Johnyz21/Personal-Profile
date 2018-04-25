@@ -7,6 +7,7 @@ var bodyParser = require('body-parser');
 var expressValidator = require('express-validator');
 var expressSession = require('express-session');
 var index = require('./routes/main/index.js');
+var google_verification = require('./routes/google_verification/index.js')
 var compression = require('compression');
 var helmet = require('helmet');
 
@@ -16,6 +17,7 @@ var app = express();
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
+app.engine('html', require('ejs').renderFile);
 
 // uncomment after placing your favicon in /public
 app.use(favicon(path.join(__dirname, 'public/favicon', 'favicon.ico')));
@@ -30,6 +32,7 @@ app.use(compression());
 app.use(helmet());
 
 app.use('/', index);
+app.use('/google871789df72a533d2.html',google_verification);
 app.use('/js',  express.static(__dirname + '/node_modules/bootstrap/dist/js'));
 app.use('/css', express.static(__dirname + '/node_modules/bootstrap/dist/css'));
 app.use('/js',  express.static(__dirname + '/node_modules/jquery/dist'));
